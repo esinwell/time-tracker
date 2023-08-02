@@ -1,3 +1,5 @@
+package model;
+
 import java.sql.Timestamp;
 
 public class TimeBlock {
@@ -31,7 +33,7 @@ public class TimeBlock {
   public void setEndTime(Timestamp endTime) {
     this.endTime = endTime;
   }
-  
+
   public Project projectObj() {
     return myProject;
   }
