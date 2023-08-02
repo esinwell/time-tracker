@@ -1,36 +1,33 @@
 package model;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class TimeBlock {
 
-  private Timestamp startTime;
-  private Timestamp endTime;
+  private LocalDateTime startTime;
+  private LocalDateTime endTime;
   //only 1 project per timeblock?
   private Project myProject;
 
-  public TimeBlock(Timestamp start, Timestamp end, Project project) {
+  public TimeBlock(LocalDateTime start, LocalDateTime end, Project project) {
     startTime = start;
     endTime = end;
     myProject = project;
   }
 
-  public long calculateTime() {
-    return endTime.getTime() - startTime.getTime();
-  }
 
-
-  public Timestamp startTime() {
+  public LocalDateTime startTime() {
     return startTime;
   }
-  public void setStartTime(Timestamp startTime) {
+  public void setStartTime(LocalDateTime startTime) {
     this.startTime = startTime;
   }
 
-  public Timestamp endTime() {
+  public LocalDateTime endTime() {
     return endTime;
   }
-  public void setEndTime(Timestamp endTime) {
+  public void setEndTime(LocalDateTime endTime) {
     this.endTime = endTime;
   }
 
