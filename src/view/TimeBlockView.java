@@ -2,6 +2,7 @@ package view;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -63,7 +64,7 @@ public class TimeBlockView extends VBox {
     duration.getChildren().addAll(myH, H, myM, M, myS, S);
   }
 
-  private String formatDate(LocalDateTime time) {
+  private String formatDate(ZonedDateTime time) {
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("hh:mm:ss dd MMM yy");
     String text = time.format(dtf);
     return text;
